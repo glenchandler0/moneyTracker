@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="gchandler.moneytracker.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="341dp"
+        android:layout_height="501dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="5dp">
+
+        <EditText
+            android:id="@+id/totalValueDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26dp"
+            android:ems="10"
+            android:inputType="none|numberDecimal" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/totalValueDisplay"
+            android:layout_alignRight="@+id/totalValueDisplay"
+            android:layout_below="@+id/totalValueDisplay"
+            android:clickable="true"
+            app:backgroundTint="@android:color/holo_green_light"
+            app:fabSize="mini"
+            app:rippleColor="@android:color/holo_green_dark"
+            app:srcCompat="@android:drawable/arrow_up_float" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/totalValueDisplay"
+            android:layout_alignStart="@+id/totalValueDisplay"
+            android:layout_below="@+id/totalValueDisplay"
+            android:clickable="true"
+            app:backgroundTint="@android:color/holo_red_light"
+            app:fabSize="mini"
+            app:rippleColor="@android:color/holo_red_dark"
+            app:srcCompat="@android:drawable/arrow_down_float" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
